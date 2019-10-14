@@ -33,7 +33,7 @@ module.exports = function(gj, options) {
     });
 
   return zip.generateAsync({
-    type: typeof process !== undefined ? 'nodebuffer' : 'blob',
+    type: typeof process !== 'undefined' ? 'nodebuffer' : 'blob',
     compression: 'DEFLATE'
   });
 };
